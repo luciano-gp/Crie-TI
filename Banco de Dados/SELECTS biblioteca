@@ -1,0 +1,79 @@
+1
+SELECT
+	emprestimo.codigo AS "Empréstimo",
+	usuario.nome AS "Usuário",
+	atendente.nome AS "Atendente"
+FROM 
+	emprestimo
+	INNER JOIN usuario ON emprestimo.usuario_codigo = usuario.codigo
+	INNER JOIN atendente ON emprestimo.atendente_codigo = atendente.codigo;
+	
+2
+SELECT
+	genero.nome AS "Gênero",
+	COUNT(livro.codigo) AS "Total"
+FROM
+	livro
+RIGHT JOIN genero ON livro.genero_codigo = genero.codigo
+GROUP BY genero.nome
+ORDER BY genero.nome;
+
+3
+SELECT
+	genero.nome,
+COUNT(emprestimo.data_hora)
+FROM
+	emprestimo
+INNER JOIN livro ON emprestimo.livro_codigo = livro.codigo
+RIGHT JOIN genero ON livro.genero_codigo = genero.codigo
+GROUP BY genero.nome;
+
+4
+SELECT 
+	autor.nome,
+COUNT(livro.codigo)
+FROM 
+	livro
+INNER JOIN livro_autor ON livro.codigo = livro_autor.livro_codigo
+RIGHT JOIN autor ON livro_autor.autor_codigo = autor.codigo
+GROUP BY autor.nome
+ORDER BY autor.nome;
+
+5
+SELECT 
+	atendente.nome,
+COUNT (emprestimo.data_hora)
+FROM emprestimo
+INNER JOIN atendente ON emprestimo.atendente_codigo = atendente.codigo
+GROUP BY atendente.nome;
+
+6
+SELECT 
+	usuario.nome,
+COUNT (emprestimo.data_hora)
+FROM emprestimo
+RIGHT JOIN usuario ON emprestimo.usuario_codigo = usuario.codigo
+GROUP BY usuario.nome;
+
+7
+SELECT 
+	usuario.nome,
+	STRING_AGG (livro.titulo, ',') AS "Livros",
+	COUNT (emprestimo.data_hora)
+FROM emprestimo
+	RIGHT JOIN usuario ON emprestimo.usuario_codigo = usuario.codigo
+	INNER JOIN livro ON emprestimo.livro_codigo = livro.codigo
+	WHERE emprestimo.data_devolucao IS NULL
+GROUP BY usuario.nome;
+
+8
+SELECT 
+	livro.titulo,
+	genero.nome,
+	STRING_AGG(autor.nome, ',') AS "Autores"
+FROM 
+	livro
+	LEFT JOIN livro_autor ON livro.codigo = livro_codigo
+	LEFT JOIN autor ON autor_codigo = autor.Codigo
+	RIGHT JOIN genero ON livro.genero_codigo = genero.codigo
+GROUP BY livro.titulo, genero.nome;

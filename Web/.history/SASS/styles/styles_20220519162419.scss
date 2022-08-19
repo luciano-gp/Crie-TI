@@ -1,0 +1,36 @@
+@use "variables";
+
+body {
+    $color-secondary: yellow;
+    color: variables.$color-primary;
+}
+
+section {
+    background-color: red;
+
+    div{
+        color: green;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+@mixin textBox ($backgroundColor) {
+    background-color: $backgroundColor;
+    border: 2px solid black;
+    color: #ffffff;
+}
+
+.info {
+    @include textBox (darkblue);
+}
+
+.danger {
+    @include textBox (darkred);
+}
+
+.warning {
+    @include textBox (yellow);
+}

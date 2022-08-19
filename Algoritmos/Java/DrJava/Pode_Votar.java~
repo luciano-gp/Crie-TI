@@ -1,0 +1,16 @@
+class Pode_Votar{
+  public static void main(String[] args) {
+    
+    double anon, anoa, calc;
+    
+    anoa = Entrada.leiaDouble("Em que ano estamos?");
+    anon = Entrada.leiaDouble("Em que ano você nasceu?");
+    
+    calc = ( anoa - anon);
+    
+    if ( calc >= 16) {
+      System.out.println("Você já pode votar nas eleições deste ano");
+    } else {
+      System.out,println("Você ainda não pode votar nas eleições deste ano");
+    }
+  }

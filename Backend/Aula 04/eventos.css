@@ -1,0 +1,33 @@
+body {
+    background-color: gray;
+}
+
+.caixa {
+    width: 250px;
+    background-color: #ff0000;
+    height: 150px;
+    margin-bottom: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.caixa.onmouseover {
+    background-color: #ff5555;
+}
+
+.caixa.onclick {
+    background-color: #ff9999;
+}
+
+.botao {
+    margin-bottom: 20px;
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    color: #000000;
+    background-color: #ff9999;
+}
+
+.botao:hover {
+    background-color: #ff5555;
+}

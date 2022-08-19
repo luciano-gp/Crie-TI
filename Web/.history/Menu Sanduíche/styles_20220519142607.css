@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: pink;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.header__check,
+.header__toggle {
+    display: none;
+}
+
+.menu__item {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .menu__item {
+        display: block;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .menu__item--active {
+        background-color: pink;
+        color: white;
+    }
+
+    .header__toggle {
+        display: block;
+    }
+
+    .header__check:checked ~ .menu {
+        transform: translateX(0);
+    }
+}

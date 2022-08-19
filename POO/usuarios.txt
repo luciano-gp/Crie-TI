@@ -1,0 +1,5 @@
+admin;63a9f0ea7bb98050796b649e85481845
+local;67b3dba8bc6778101892eb77249db32e
+geral;3f4cf6d1fc13253b3a4e895e2ed279ce
+luciano;d1cbdbc9cacee6c8b133c7a92a83bcca
+teste;698dc19d489c4e4db73e28a713eab07b

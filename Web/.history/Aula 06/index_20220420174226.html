@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Uma página para quem gosta de HTML, CSS e pudim">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Luciano Gomes">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Estilizações CSS</title>
+    <base href="/Aula 06/">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<div>
+
+    <!-- Comentário HTML -->
+
+    <h3>Seletores CSS Simples</h3>
+
+    <h4>Tag</h4>
+    <blockquote>Qualquer texto</blockquote>
+
+    <h4>Classe</h4>
+    <blockquote class="blue">Qualquer texto</blockquote>
+
+    <h4>ID</h4>
+    <blockquote class="blue" id="unique-blockquote">Qualquer texto</blockquote>
+
+    <h4>Universal</h4>
+    <blockquote>Qualquer texto</blockquote>
+
+    <h4>Atributo</h4>
+    <blockquote color="pink">Qualquer texto</blockquote>
+
+    <h3>Seletores CSS Combinadores</h3>
+
+    <p>Parágrafo fora da section</p>
+    <section>
+        <p>Parágrafo dentro da Section</p>
+        <div>
+            <p>Parágrafo dentro da DIV</p>
+        </div>
+    </section>
+
+    <h4>Irmãos Adjacentes e Gerais</h4>
+    <section>
+        <div>Texto dentro da DIV</div>
+        <p>Texto do parágrafo 1</p>
+        <p>Texto do parágrafo 2</p>
+        <span></span>
+        <p>Texto do parágrafo 3</p>
+    </section>
+
+    <h4>Pseudo Classes</h4>
+
+    <a href="https://google.com/" target="_blank">Ir para o Google</a>
+
+    <h4>Pseudo Elementos</h4>
+
+    <p class="first-letter-big">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sapiente laboriosam
+        dolore officiis tenetur! Sed, vero. Deleniti, aspernatur hic, quisquam aperiam accusamus vitae possimus,
+        eligendi consectetur voluptates veritatis magni nam!</p>
+
+    <div class="box"></div>
+
+    <h4>Agrupamento de Seletores</h4>
+
+    <h6 class="h6">Isto é um H6</h6>
+    <p class="p">Isto é um P</p>
+
+    <br><br><br><br><br>
+
+    <h3>Cores</h3>
+
+    <div class="color-box" style="background-color: #ff0000;"></div>
+    <div class="color-box" style="background-color: #990000;"></div>
+    <div class="color-box" style="background-color: #330000;"></div>
+    <div class="color-box" style="background-color: #ff0099;"></div>
+
+    <div></div>
+
+    <div class="color-box" style="background-color: rgb(0, 255 ,0);"></div>
+    <div class="color-box" style="background-color: rgb(0, 150 ,0);"></div>
+    <div class="color-box" style="background-color: rgb(0, 30, 0);"></div>
+    <div class="color-box" style="background-color: rgb(0, 255, 100);"></div>
+
+    <div></div>
+
+    <div class="color-box" style="background-color: hsl(240, 100%, 60%);"></div>
+    <div class="color-box" style="background-color: hsl(240, 100%, 50%);"></div>
+    <div class="color-box" style="background-color: hsl(230, 100%, 30%);"></div>
+    <div class="color-box" style="background-color: hsl(220, 100%, 10%);"></div>
+
+    <div></div>
+
+    <div style="background-color: white;">
+        <div class="color-box" style="background-color: #ff0000;"></div>
+        <div class="color-box" style="background-color: #ff000099;"></div>
+        <div class="color-box" style="background-color: rgba(255, 0, 0, 30%);"></div>
+        <div class="color-box" style="background-color: hsla(0, 100%, 50%, 10%);"></div>
+    </div>
+
+    <h3>Imagem de Fundo e Bordas</h3>
+
+    <div class="image-container bordered"></div>
+
+    <h3>Altura, Largura, Margin e Padding</h3>
+
+    <div style="background-color: #222222;">
+        <div style="width: 200px; padding: 20px; margin-bottom: 10px; background-color: orange;">
+            <div style="height: 100px; background-color: aqua;"></div>
+        </div>
+        <div style="width: 200px; height: 100px; padding: 20px; margin-top: 50px; background-color: purple;"></div>
+    </div>
+
+    <h3>Box Sizing</h3>
+
+    <div
+        style="width: 200px; height: 100px; padding: 20px; border: 10px; background-color: orange; margin-bottom: 10px;">
+    </div>
+    <div
+        style="box-sizing: border-box; width: 200px; height: 100px; padding: 20px; border: 10px; background-color: orange;">
+    </div>
+
+    <br><br><br><br><br>
+
+    </body>
+
+</html>

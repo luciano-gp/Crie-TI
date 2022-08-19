@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Uma página para quem gosta de HTML, CSS e pudim">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Luciano Gomes">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Estilizações CSS</title>
+    <base href="/">
+    <style type="text/css">
+        /*Comentário de CSS*/
+
+        /*Seletor de TAG*/
+        blockquote {
+            color: red;
+        }
+
+        /*Seletor de Classe*/
+        .blue {
+            color: blue;
+        }
+
+        /*Seletor de ID*/
+        #unique-blockquote {
+            color: green;
+        }
+
+        /*Seletor Universal*/
+        * {
+            color: #000000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /*Seletor de Atributo*/
+        [color="pink"] {
+            color: pink;
+        }
+
+        /*Seletor Descendente (todos filhos, netos, bisnetos...)*/
+        section p {
+            background-color: purple;
+        }
+
+        /*Seletor Filho (filhos imediatos)*/
+        section>p {
+            background-color: yellow;
+        }
+
+        /*Seletor de Irmão Adjacente (elementos imediatamente após)*/
+        div+p+p {
+            color: aqua;
+            background-color: unset;
+        }
+
+        /*Seletor de Irmão Geral*/
+        div~p {
+            background-color: brown;
+        }
+
+        /*Seletor de Pseudo-Classe*/
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: aqua;
+        }
+
+        a:focus {
+            color: midnightblue;
+        }
+
+        div~p:nth-child(5) {
+            color: white;
+        }
+
+        /*Seletor de Pseudo-Elemento*/
+        .first-letter-big::first-letter {
+            font-size: 30px;
+            color: grey;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: salmon;
+        }
+
+        .box::before {
+
+        }
+
+        .box::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: plum;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Comentário HTML -->
+
+    <h3>Seletores CSS Simples</h3>
+
+    <h4>Tag</h4>
+    <blockquote>Qualquer texto</blockquote>
+
+    <h4>Classe</h4>
+    <blockquote class="blue">Qualquer texto</blockquote>
+
+    <h4>ID</h4>
+    <blockquote class="blue" id="unique-blockquote">Qualquer texto</blockquote>
+
+    <h4>Universal</h4>
+    <blockquote>Qualquer texto</blockquote>
+
+    <h4>Atributo</h4>
+    <blockquote color="pink">Qualquer texto</blockquote>
+
+    <h3>Seletores CSS Combinadores</h3>
+
+    <p>Parágrafo fora da section</p>
+    <section>
+        <p>Parágrafo dentro da Section</p>
+        <div>
+            <p>Parágrafo dentro da DIV</p>
+        </div>
+    </section>
+
+    <h4>Irmãos Adjacentes e Gerais</h4>
+    <section>
+        <div>Texto dentro da DIV</div>
+        <p>Texto do parágrafo 1</p>
+        <p>Texto do parágrafo 2</p>
+        <span></span>
+        <p>Texto do parágrafo 3</p>
+    </section>
+
+    <h4>Pseudo Classes</h4>
+
+    <a href="https://google.com/" target="_blank">Ir para o Google</a>
+
+    <h4>Pseudo Elementos</h4>
+
+    <p class="first-letter-big">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sapiente laboriosam
+        dolore officiis tenetur! Sed, vero. Deleniti, aspernatur hic, quisquam aperiam accusamus vitae possimus,
+        eligendi consectetur voluptates veritatis magni nam!</p>
+
+    <div class="box"></div>
+
+    <br><br><br><br><br><br>
+</body>
+
+</html>

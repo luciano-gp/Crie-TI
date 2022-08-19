@@ -1,0 +1,28 @@
+class Exemplo1{ //inicio
+  
+  public static void main(String[] args) { //inicio bloco de codigo  
+    
+    //idade:inteiro  
+    // int = Integer (inteiro)
+    // double = real
+    // char = 1 caracter
+    // String = caracter
+    
+    int idade;
+    double salario; 
+    char sexo;
+    String nome;
+    
+    idade = 23;
+    salario = 1200.50;
+    sexo = 'F'; // caracter aspas simples
+    nome = "Filomena"; // string aspas duplas
+    
+    System.out.println("Eu me chamo " + nome
+                         + ", tenho " + idade
+                         + " anos, sou do sexo " + sexo
+                         + " e recebo R$" + salario);
+    
+  } //final bloco de codigo
+  
+} //fim

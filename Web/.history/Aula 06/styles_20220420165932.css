@@ -1,0 +1,111 @@
+/*Comentário de CSS*/
+
+/*Seletor de TAG*/
+blockquote {
+    color: red;
+}
+
+/*Seletor de Classe*/
+.blue {
+    color: blue;
+}
+
+/*Seletor de ID*/
+#unique-blockquote {
+    color: green;
+}
+
+/*Seletor Universal*/
+* {
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Seletor de Atributo*/
+[color="pink"] {
+    color: pink;
+}
+
+/*Seletor Descendente (todos filhos, netos, bisnetos...)*/
+section p {
+    background-color: purple;
+}
+
+/*Seletor Filho (filhos imediatos)*/
+section>p {
+    background-color: yellow;
+}
+
+/*Seletor de Irmão Adjacente (elementos imediatamente após)*/
+div+p+p {
+    color: aqua;
+    background-color: unset;
+}
+
+/*Seletor de Irmão Geral*/
+div~p {
+    background-color: brown;
+}
+
+/*Seletor de Pseudo-Classe*/
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: aqua;
+}
+
+a:focus {
+    color: midnightblue;
+}
+
+div~p:nth-child(5) {
+    color: white;
+}
+
+/*Seletor de Pseudo-Elemento*/
+.first-letter-big::first-letter {
+    font-size: 30px;
+    color: grey;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: salmon;
+}
+
+/*.box::before {}*/
+
+.box::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    background-color: plum;
+    display: block;
+}
+
+/*Agrupamento de Seletores*/
+
+.h6,
+.p {
+    background-color: green;
+}
+
+/*Cores*/
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+/*Imagem de Fundo*/
+
+.image-container {
+    width: 100%;
+    height: 600px;
+    background-image: url(https://external-preview.redd.it/Fd0I-oCqjtzw0DosUoOrt3DwhV3MpT1K2HPe2YwvUo4.jpg?auto=webp&s=d3f21e4af4e7f493cd6c0f08b7a4b22c7b3eb7fb);
+}

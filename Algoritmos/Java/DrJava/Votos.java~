@@ -1,0 +1,21 @@
+class Votos{
+  public static void main(String[] args) {
+    
+    int b, n, v, t;
+    double pb, pn, pv;
+    
+    v = Entrada.leiaInt("Quantos votos válidos tivemos?");
+    n = Entrada.leiaInt("Quantos votos nulos tivemos?");
+    b = Entrada.leiaInt("Quantos votos em branco tivemos?");
+    
+    t = (v + b + n);
+    pv = ((v / t) * 100);
+    pn = ((n / t) * 100);
+    pb = ((b / t) * 100);
+    
+    System.out,println("Tivemos um total de " + t + " votos");
+    System.out.println("Sendo: " + pv + "% de votos válidos;");
+    System.out.println(pn + "% de votos nulos;");
+    System.out.println(pb + "% de votos em branco.");
+  }
+}

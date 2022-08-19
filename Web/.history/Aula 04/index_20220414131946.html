@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 4</title>
+  <style>
+    table, tr, th, td {
+      border: 1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Tabelas</h3>
+
+  <h4>Tabela simples</h4>
+  <table>
+    <tr>
+      <th>Título 1</th>
+      <th>Título 2</th>
+      <th>Título 3</th>
+      <th>Título 4</th>
+      <th>Título 5</th>
+      <th>Título 6</th>
+    </tr>
+    <tr>
+      <td>Célula 1</td>
+      <td>Célula 2</td>
+      <td>Célula 3</td>
+      <td>Célula 4</td>
+      <td>Célula 5</td>
+      <td>Célula 6</td>
+    </tr>
+    <tr>
+      <td>Célula 1</td>
+      <td>Célula 2</td>
+      <td>Célula 3</td>
+      <td>Célula 4</td>
+      <td>Célula 5</td>
+      <td>Célula 6</td>
+    </tr>
+  </table>
+
+  <br/>
+
+  <h4>Tabela completa</h4>
+  <table>
+    <caption>Essa é uma tabela completa</caption>
+    <thead>
+      <tr>
+        <th>Título 1</th>
+        <th>Título 2</th>
+        <th>Título 3</th>
+        <th>Título 4</th>
+        <th>Título 5</th>
+        <th>Título 6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Célula 1</td>
+        <td>Célula 2</td>
+        <td>Célula 3</td>
+        <td>Célula 4</td>
+        <td>Célula 5</td>
+        <td>Célula 6</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Célula 1</td>
+        <td>Célula 2</td>
+        <td>Célula 3</td>
+        <td>Célula 4</td>
+        <td>Célula 5</td>
+        <td>Célula 6</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <br/>
+  <hr/>
+  <br/>
+
+  <h3>Multimídia</h3>
+
+  <h4>Imagem</h4>
+  <img src="assets/imagem.webp" alt="Um delicioso pudim" width="400"/>
+
+  <br/>
+
+  <h4>Vídeo</h4>
+  <video controls>
+    <source src="assets/video.ogg" type="video/ogg">
+    <source src="assets/video.mp4" type="video/mp4">
+    Seu navegador não suporta a tag de vídeo.
+  </video>
+
+  <br/>
+
+  <h4>Áudio</h4>
+  <audio controls>
+    <source src="assets/audio.ogg" type="audio/ogg">
+    <source src="assets/audio.mp3" type="audio/mpeg">
+    Seu navegador não suporta a tag de áudio.
+  </audio>
+
+  <br/>
+
+  <h4>Picture</h4>
+  <picture>
+    <source srcset="assets/imagem.webp" type="image/webp" media="(min-width:800px)" width="800">
+    <source srcset="assets/imagem-2.jpg" type="image/jpeg" media="(min-width:400px)" width="400">
+    <img src="assets/imagem-3.jpg" alt="Um delicioso pudim" width="200"/>
+  </picture>
+
+  <br/>
+
+  <h4>Figure</h4>
+  <figure>
+    <img src="assets/imagem.webp" alt="Um delicioso pudim" width="400"/>
+    <figcaption>Figura 1: pudim</figcaption>
+  </figure>
+
+  <br/>
+  <hr/>
+  <br/>
+
+  <h3>Formulários</h3>
+
+  <form>
+
+    <h4>Checkbox</h4>
+    <fieldset>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br/>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br/>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br/>
+    </fieldset>
+
+    <br/>
+
+    <h4>Radio button</h4>
+    <fieldset>
+      <input type="radio" id="language1" name="language" value="HTML">
+      <label for="language1">HTML</label><br/>
+      <input type="radio" id="language2" name="language" value="CSS">
+      <label for="language2">CSS</label><br/>
+      <input type="radio" id="language3" name="language" value="JavaScript">
+      <label for="language3">JavaScript</label><br/>
+    </fieldset>
+
+    <br/>
+
+    <h4>Text</h4>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" value="John Doe" disabled>
+
+    <br/>
+
+    <h4>Email</h4>
+    <label for="email">Endereço de e-mail:</label>
+    <input type="email" id="email" name="email" placeholder="nome@dominio.com">
+
+    <br/>
+
+    <h4>Number</h4>
+    <label for="quantity">Quantidade (entre 1 e 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+
+    <br/>
+
+    <h4>Tel</h4>
+    <label for="phone">Número de telefone:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <br/>
+
+    <h4>Password</h4>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password">
+
+    <br/>
+
+    <h4>URL</h4>
+    <label for="url">Insira sua página:</label>
+    <input type="url" id="url" name="url">
+
+    <br/>
+
+    <h4>Search</h4>
+    <label for="search">Buscar:</label>
+    <input type="search" id="search" name="search">
+
+    <br/>
+
+    <h4>Hidden</h4>
+    <label for="hidden">Valor escondido:</label>
+    <input type="hidden" id="hidden" name="hidden" value="123456">
+
+    <br/>
+
+    <h4>File</h4>
+    <label for="file">Selecione um arquivo:</label>
+    <input type="file" id="file" name="file">
+
+    <br/>
+
+    <h4>Date</h4>
+    <label for="date">Data de nascimento:</label>
+    <input type="date" id="date" name="date">
+
+    <br/>
+
+    <h4>Time</h4>
+    <label for="time">Hora de nascimento:</label>
+    <input type="time" id="time" name="time">
+
+    <br/>
+
+    <h4>Datetime</h4>
+    <label for="datetime">Data e hora de nascimento:</label>
+    <input type="datetime-local" id="datetime" name="datetime">
+
+    <br/>
+
+    <h4>Week</h4>
+    <label for="week">Informe uma semana:</label>
+    <input type="week" id="week" name="week">
+
+    <br/>
+
+    <h4>Month</h4>
+    <label for="month">Informe um mês e ano:</label>
+    <input type="month" id="month" name="month">
+
+    <br/>
+
+    <h4>Color</h4>
+    <label for="color">Selecione sua cor favorita:</label>
+    <input type="color" id="color" name="color"><br/>
+
+    <br/>
+
+    <h4>Range</h4>
+    <label for="range">Volume (entre 0 e 50):</label>
+    <input type="range" id="range" name="range" min="0" max="50"><br/>
+
+    <br/>
+
+    <h4>Button</h4>
+    <input type="button" value="Botão">
+
+    <br/>
+
+    <h4>Submit</h4>
+    <input type="submit" value="Enviar o formulário">
+
+    <br/>
+
+    <h4>Reset</h4>
+    <input type="reset" value="Limpar o formulário">
+
+    <br/>
+
+    <h4>Image</h4>
+    <input type="image" src="assets/submit.png" width="200px">
+
+    <br/>
+
+    <h4>Textarea</h4>
+    <label for="textarea">Área de texto:</label>
+    <textarea id="textarea" name="textarea" rows="4"></textarea>
+
+    <br/>
+
+    <h4>Select simples</h4>
+    <label for="select1">Selecione uma opção:</label>
+    <select id="select1" name="select1">
+      <option value="0" selected disabled></option>
+      <option value="1">Opção 1</option>
+      <option value="2">Opção 2</option>
+      <option value="3">Opção 3</option>
+      <option value="4">Opção 4</option>
+      <option value="5">Opção 5</option>
+    </select>
+
+    <br/>
+
+    <h4>Select agrupado</h4>
+    <label for="select2">Selecione uma opção:</label>
+    <select id="select2" name="select2">
+      <optgroup label="Grupo 1">
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+      </optgroup>
+      <optgroup label="Grupo 2">
+        <option value="3">Opção 3</option>
+        <option value="4">Opção 4</option>
+        <option value="5">Opção 5</option>
+      </optgroup>
+    </select>
+
+    <br/>
+
+    <h4>Select múltiplo</h4>
+    <label for="select3">Selecione várias opções:</label>
+    <select multiple id="select3" name="select3">
+      <option value="1">Opção 1</option>
+      <option value="2">Opção 2</option>
+      <option value="3">Opção 3</option>
+      <option value="4">Opção 4</option>
+      <option value="5">Opção 5</option>
+    </select>
+
+  </form>
+
+</body>
+</html>

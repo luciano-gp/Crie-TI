@@ -1,0 +1,10 @@
+button {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    margin: 5px
+}
+
+.flag::after {
+    content: "?";
+}

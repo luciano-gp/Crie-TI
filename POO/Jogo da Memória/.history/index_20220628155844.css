@@ -1,0 +1,16 @@
+button {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+}
+
+.flag::after {
+    content: "?";
+}
+
+.viraFlag {
+    content: "1";
+}

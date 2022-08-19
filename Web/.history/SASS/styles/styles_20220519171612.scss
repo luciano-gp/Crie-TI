@@ -1,0 +1,72 @@
+@use "variables";
+
+body {
+    $color-secondary: yellow;
+    color: variables.$color-primary;
+}
+
+section {
+    background-color: red;
+
+    div{
+        color: green;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+@mixin textBox ($backgroundColor) {
+    background-color: $backgroundColor;
+    border: 2px solid black;
+    color: #ffffff;
+}
+
+.info {
+    @include textBox (darkblue);
+}
+
+.danger {
+    @include textBox (darkred);
+}
+
+.warning {
+    @include textBox (yellow);
+}
+
+%textBox2 {
+    border: 2px solid;
+    color: black;
+    padding: 10px;
+}
+
+.info2 {
+    @extend %textBox2;
+    border-color: darkblue;
+}
+
+.danger2 {
+    @extend %textBox2;
+    border-color: darkred;
+}
+
+.warning2 {
+    @extend %textBox2;
+    border-color: yellow;
+    height: 20px;
+    margin-bottom: 1px;
+}
+
+.bg-blue {
+    background-color: blue;
+    height: 20px;
+    margin-bottom: 1px;
+}
+
+$sizes: 15, 20, 30, 40;
+@each $size in $sizes {
+    .width-#{$size} {
+        width: #{$size}px;
+    }
+}

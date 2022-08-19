@@ -1,0 +1,23 @@
+$color-primary: blue;
+
+body {
+    $color-secondary: yellow;
+
+    color: $color-primary;
+
+    span{
+        color: $color-secondary;
+    }
+}
+
+section {
+    background-color: red;
+
+    div{
+        color: green;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}

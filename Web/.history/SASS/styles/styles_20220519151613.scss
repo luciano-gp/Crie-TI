@@ -1,0 +1,17 @@
+$color-primary: blue;
+
+body {
+    color: $color-primary;
+}
+
+section {
+    background-color: red;
+}
+
+section div {
+    color: green;
+}
+
+section div span {
+    font-weight: bold;
+}

@@ -1,0 +1,97 @@
+body {
+  color: blue;
+}
+
+section {
+  background-color: red;
+}
+section div {
+  color: green;
+}
+section div span {
+  font-weight: bold;
+}
+
+.info {
+  background-color: darkblue;
+  border: 2px solid black;
+  color: #ffffff;
+}
+
+.danger {
+  background-color: darkred;
+  border: 2px solid black;
+  color: #ffffff;
+}
+
+.warning {
+  background-color: yellow;
+  border: 2px solid black;
+  color: #ffffff;
+}
+
+.warning2, .danger2, .info2 {
+  border: 2px solid;
+  color: black;
+  padding: 10px;
+}
+
+.info2 {
+  border-color: darkblue;
+}
+
+.danger2 {
+  border-color: darkred;
+}
+
+.warning2 {
+  border-color: yellow;
+  height: 20px;
+  margin-bottom: 1px;
+}
+
+.bg-blue {
+  background-color: blue;
+  height: 20px;
+  margin-bottom: 1px;
+}
+
+.width-100 {
+  width: 100px;
+}
+
+.width-200 {
+  width: 200px;
+}
+
+.width-300 {
+  width: 300px;
+}
+
+.width-400 {
+  width: 400px;
+}
+
+.color-red {
+  color: #990000;
+}
+
+.background-color-red {
+  background-color: #990000;
+}
+
+.color-green {
+  color: #009900;
+}
+
+.background-color-green {
+  background-color: #009900;
+}
+
+.color-blue {
+  color: #000099;
+}
+
+.background-color-blue {
+  background-color: #000099;
+}/*# sourceMappingURL=styles.css.map */

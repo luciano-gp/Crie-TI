@@ -1,0 +1,17 @@
+:root {
+  --color-test: red;
+}
+
+body {
+  color: blue;
+}
+
+section {
+  background-color: var(--color-test);
+}
+section div {
+  color: green;
+}
+section div span {
+  font-weight: bold;
+}/*# sourceMappingURL=styles_20220519160104.css.map */

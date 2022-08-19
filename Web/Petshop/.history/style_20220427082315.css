@@ -1,0 +1,432 @@
+* {
+    font-family: 'Open sans', sans-serif;
+    text-decoration: none;
+    line-height: 1.5em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 6em;
+    box-shadow: 0px 0px 10px #cecece;
+    z-index: 1;
+}
+
+nav,
+table {
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+.menu {
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #382c32;
+    font-weight: bold;
+}
+
+.menu:hover {
+    color: #FF0077;
+}
+
+#logo {
+    height: 50%;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -3em;
+}
+
+.titulo {
+    font-size: 32px;
+    color: #382c32;
+    text-align: center;
+    padding-top: 1em;
+}
+
+#serviços-home {
+    padding: 0 10%;
+}
+
+#serviços-home h3 {
+    font-size: 18px;
+    color: #FF0077;
+}
+
+#serviços-home p {
+    font-size: 16px;
+    color: #858585;
+}
+
+i {
+    color: #FF0077;
+    font-size: 3.5em;
+}
+
+.coluna:hover i {
+    animation: rotate forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes rotate {
+    0% {
+		transform: rotate(0) scale(1);
+	}
+	100% {
+		transform: rotate(10deg) scale(1.1);
+	}
+}
+
+.coluna {
+    width: 25%;
+    float: left;
+    padding: 0.8em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.linha {
+    padding-bottom: 20em;
+    padding-top: 2em;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#sobre-home {
+    background-color: #0077ff;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#sobre-home img {
+    height: 3em;
+    padding-bottom: 1.5em;
+}
+
+#produtos {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 5em;
+}
+
+#produtos .titulo-produtos {
+    padding-top: 5em;
+    text-align: left;
+    font-size: 32px;
+    color: #382c32;
+}
+
+.coluna-produtos {
+    width: 16.66%;
+    float: left;
+    padding: 0.8em;
+    padding-bottom: 1.5em;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+}
+
+.coluna-produtos img {
+    width: 100%;
+}
+
+.coluna-produtos:hover {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #cecece;
+    border-width: thin;
+}
+
+.coluna-produtos:hover img{
+    opacity: 0.3;
+}
+
+.nome-produto {
+    color: #858585;
+    font-size: 14px;
+    height: 5em;
+}
+
+.preço {
+    color: #FF0077;
+    font-size: 16px;
+}
+
+.botao-produtos {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FF0077;
+    text-align: center;
+    font-size: 16px;
+    width: 9em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #FF0077;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #ffffff;
+    padding-top: 5em;
+    padding-bottom: 2em;
+    font-size: 16px;
+}
+
+footer img {
+    height: 3em;
+    padding-bottom: 1.5em;
+}
+
+footer h3 {
+    font-size: 18px;
+}
+
+address {
+    font-size: 16px;
+    font-style: normal;
+}
+
+.rodape {
+    display: inline-block;
+    width: 33%;
+    height: 14em;
+    vertical-align: top;
+}
+
+.rodape i {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-left: 5%;
+
+}
+
+.fa-brands:hover {
+    animation: rotate forwards;
+    animation-duration: 0.5s;
+}
+
+.copy {
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    padding-top: 1em;
+}
+
+hr {
+    border-color: #ffd8ea;
+    opacity: 0.3;
+}
+
+#sobre {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    padding-left: 8%;
+    padding-right: 8%;
+    display: inline-block;
+}
+
+.sobre h1 {
+    font-size: 32px;
+    color: #382c32;
+
+}
+
+.imagem-sobre img {
+    width: 33%;
+    padding-right: 3%;
+    float: left;
+}
+
+.texto-sobre {
+    width: 100%;
+    font-size: 16px;
+    color: #382c32;
+    margin-top: -1em;
+}
+
+.botao-contato {
+    margin-top: 2em;
+    margin-left: 36%;
+    background-color: #FF0077;
+    text-align: center;
+    font-size: 16px;
+    width: 11em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
+
+.esquerda h2 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.texto1 {
+    font-size: 18px;
+    color: #ffffff;
+} 
+
+.texto2 {
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.esquerda {
+    height: 25em;
+}
+
+.esquerda img{
+    width: 40%;
+    height: 25em;
+    padding-right: 2em;
+    float: left;
+    object-fit: cover;
+}
+
+.texto-esquerda {
+    height: 25em;
+    text-align: left;
+    padding-right: 8%;
+}
+
+.direita h2 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.direita {
+    height: 25em;
+}
+
+.direita img {
+    width: 40%;
+    height: 25em;
+    padding-left: 2em;
+    float: right;
+    object-fit: cover;
+}
+
+.texto-direita {
+    height: 25em;
+    text-align: right;
+    padding-left: 8%;
+}
+
+#contato {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 10em;
+    padding-bottom: 3em;
+}
+
+#contato h2 {
+    font-size: 32px;
+    color: #382c32;
+}
+
+.formulario {
+    width: 55%;
+    display: inline-block;
+}
+
+#contato label {
+    font-size: 14px;
+    color: #858585;
+}
+
+#contato input, #contato select {
+    margin-bottom: 1.5em;
+}
+
+#contato textarea {
+    width: 100%;
+    height: 8em;
+    border-radius: 0.4em;
+    border-style: solid;
+    border-color: #858585;
+    border-width: thin;
+    background-color: #ffffff;
+}
+
+.form-item {
+    width: 100%;
+    height: 2.5em;
+    border-radius: 0.4em;
+    border-style: solid;
+    border-color: #858585;
+    border-width: thin;
+    background-color: #ffffff;
+}
+
+input:hover {
+    box-shadow: 0px 0px 0px 2px #ffd8ea;
+}
+
+select:hover {
+    box-shadow: 0px 0px 0px 2px #ffd8ea;
+}
+
+textarea:hover {
+    box-shadow: 0px 0px 0px 2px #ffd8ea;
+}
+
+.botao {
+    color: #ffffff;
+    margin-top: 2em;
+    background-color: #FF0077;
+    text-align: center;
+    font-size: 16px;
+    width: 9em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    font-weight: bold;
+}
+
+.coluna-contato {
+    padding-left: 2em;
+    width: 40%;
+    display: inline-block;
+}
+
+.coluna-contato h3 {
+    color: #858585;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 0.7em;
+}
+
+.coluna-contato p {
+    font-size: 16px;
+    color: #FF0077;
+}
+
+iframe {
+    padding-bottom: 4em;
+}
