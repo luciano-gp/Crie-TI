@@ -1,0 +1,38 @@
+.bg-mynav {
+  background-color: #444444;
+}
+
+body {
+  font-size: 1.25rem;
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.input-group {
+  margin-right: 50px;
+}
+
+td {
+  line-height: 3rem;
+}
+
+.swal2-confirm .swal2-cancel {
+  box-shadow: none !important;
+  color: aqua !important;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  margin: 0px 30px;
+}
+
+.active {
+  background-color: #373b3e;
+}

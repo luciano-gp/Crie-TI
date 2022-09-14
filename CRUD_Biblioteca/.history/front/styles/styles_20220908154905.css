@@ -1,0 +1,16 @@
+.bg-mynav {
+  background-color: coral;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #f6f8fa;
+}
+
+td {
+  line-height: 3rem;
+}
+
+.btn__voltar {
+  text-align: center;
+}
