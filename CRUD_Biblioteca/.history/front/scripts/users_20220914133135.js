@@ -12,6 +12,7 @@ const loadTable = () => {
           trHTML += '<td>' + element.age + '</td>';
           trHTML += '<td>' + element.sex + '</td>';
           trHTML += '<td>' + element.email + '</td>';
+          trHTML += '<td>' + element.password + '</td>';
           trHTML += '<td><button type="button" class="btn btn-outline-warning" style="margin-right: 5px;" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
           trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + element.id + ')">Del</button></td>';
           trHTML += "</tr>";

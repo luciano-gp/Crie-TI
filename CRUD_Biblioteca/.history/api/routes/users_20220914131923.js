@@ -16,6 +16,7 @@ const validateUser = async (req, res, next) => {
       email: req.body.email,
       password: req.body.password
     }
+
   });
   res.json(count);
 }

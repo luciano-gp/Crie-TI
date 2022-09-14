@@ -12,6 +12,7 @@ const loadTable = () => {
           trHTML += '<td>' + element.age + '</td>';
           trHTML += '<td>' + element.sex + '</td>';
           trHTML += '<td>' + element.email + '</td>';
+          trHTML += '<td>' + element.password + '</td>';
           trHTML += '<td><button type="button" class="btn btn-outline-warning" style="margin-right: 5px;" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
           trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + element.id + ')">Del</button></td>';
           trHTML += "</tr>";
@@ -128,6 +129,32 @@ const showUserEditBox = async (id) => {
   });
 }
 
+const validateUser = () => {
+  const email = document.getElementById("email").value
+  let password = document.getElementById("password").value
+  password = MD5(password);
+
+  axios.post(`${ENDPOINT}/validateUser`, {
+    email: email,
+    password: password
+  }).then((response) => {
+    console.log(response);
+    if (response.status === 200) {
+      const data = response.data;
+      if (data > 0) {
+        window.open(`./html/books.html`, '_self');
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Email or Password is incorrect',
+          preConfirm: () => { }
+        })
+      }
+    }
+  })
+}
+
 const search = (req) => {
   const input = document.getElementById('input').value;
   axios.get(`${ENDPOINT}/${req}`)
@@ -143,6 +170,7 @@ const search = (req) => {
             trHTML += '<td>' + dat.age + '</td>';
             trHTML += '<td>' + dat.sex + '</td>';
             trHTML += '<td>' + dat.email + '</td>';
+            trHTML += '<td>' + dat.password + '</td>';
             trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
             trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + dat.id + ')">Del</button></td>';
             trHTML += "</tr>";

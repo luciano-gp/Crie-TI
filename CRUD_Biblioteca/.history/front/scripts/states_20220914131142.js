@@ -10,7 +10,7 @@ const loadTable = () => {
           trHTML += '<td>' + element.id + '</td>';
           trHTML += '<td>' + element.name + '</td>';
           trHTML += '<td>' + element.province + '</td>';
-          trHTML += '<td><button type="button" class="btn btn-outline-warning" style="margin-right: 5px;" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
+          trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
           trHTML += '<button type="button" class="btn btn-outline-danger mx-2" onclick="userDelete(' + element.id + ')">Del</button></td>';
           trHTML += "</tr>";
         });
@@ -56,7 +56,7 @@ const userEdit = () => {
       Swal.fire(`State ${response.data.name} updated`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to update state: ${error.response.data.error} `)
+      Swal.fire(`Error to update user: ${error.response.data.error} `)
         .then(() => {
           showUserEditBox(id);
         })

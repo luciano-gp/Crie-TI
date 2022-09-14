@@ -11,7 +11,7 @@ const loadTable = () => {
           trHTML += '<td>' + element.name + '</td>';
           trHTML += '<td>' + element.cep + '</td>';
           trHTML += '<td>' + element.State.name + '</td>';
-          trHTML += '<td><button type="button" class="btn btn-outline-warning" style="margin-right: 5px;" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
+          trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
           trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + element.id + ')">Del</button></td>';
           trHTML += "</tr>";
         });
@@ -164,7 +164,7 @@ const searchCity = () => {
             trHTML += '<td>' + city.name + '</td>';
             trHTML += '<td>' + city.cep + '</td>';
             trHTML += '<td>' + city.State.name + '</td>';
-            trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + city.id + ')">Edit</button>';
+            trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + city.id + ')">Edit</button>';
             trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + city.id + ')">Del</button></td>';
             trHTML += "</tr>";
           }

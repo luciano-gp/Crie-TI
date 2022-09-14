@@ -48,10 +48,10 @@ const userCreate = () => {
     FormatId: Number(format)
   })
     .then((response) => {
-      Swal.fire(`Book ${response.data.title} created`);
+      Swal.fire(`State ${response.data.title} created`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to create book: ${error.response.data.error} `)
+      Swal.fire(`Error to create state: ${error.response.data.error} `)
         .then(() => {
           showUserCreateBox();
         })
@@ -102,10 +102,14 @@ const userDelete = async (id) => {
       Swal.fire(`Book ${data.title} deleted`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to delete book: ${error.response.data.error} `);
+      Swal.fire(`Error to delete city: ${error.response.data.error} `);
       loadTable();
     });
 };
+
+const attCities = async () => {
+
+}
 
 const showUserCreateBox = () => {
   axios.get(`${ENDPOINT}/formats`)

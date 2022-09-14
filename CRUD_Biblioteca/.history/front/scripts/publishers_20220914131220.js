@@ -33,10 +33,10 @@ const userCreate = () => {
     StateId: state
   })
     .then((response) => {
-      Swal.fire(`Publisher ${response.data.name} created`);
+      Swal.fire(`State ${response.data.name} created`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to create publisher: ${error.response.data.error} `)
+      Swal.fire(`Error to create state: ${error.response.data.error} `)
         .then(() => {
           showUserCreateBox();
         })
@@ -62,7 +62,7 @@ const userEdit = () => {
       Swal.fire(`Publisher ${response.data.name} updated`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to update publisher: ${error.response.data.error} `)
+      Swal.fire(`Error to update city: ${error.response.data.error} `)
         .then(() => {
           showUserEditBox(id);
         })
@@ -74,10 +74,10 @@ const userDelete = async (id) => {
   const data = user.data;
   axios.delete(`${ENDPOINT}/publishers/` + id)
     .then((response) => {
-      Swal.fire(`Publisher ${data.name} deleted`);
+      Swal.fire(`City ${data.name} deleted`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to delete publisher: ${error.response.data.error} `);
+      Swal.fire(`Error to delete city: ${error.response.data.error} `);
       loadTable();
     });
 };
@@ -201,7 +201,7 @@ const search = (req) => {
             trHTML += '<td>' + dat.name + '</td>';
             trHTML += '<td>' + dat.City.name + '</td>';
             trHTML += '<td>' + dat.City.State.name + '</td>';
-            trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
+            trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
             trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + dat.id + ')">Del</button></td>';
             trHTML += "</tr>";
           }

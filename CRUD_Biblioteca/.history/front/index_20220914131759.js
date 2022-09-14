@@ -1,10 +1,10 @@
-const ENDPOINT = returnEndpoint();
+const ENDPOINT = "http://localhost:3001";
 const loadTable = () => {
   axios.get(`${ENDPOINT}/users`)
     .then((response) => {
       if (response.status === 200) {
         const data = response.data;
-        let trHTML = '';
+        var trHTML = '';
         data.forEach(element => {
           trHTML += '<tr class="table-active">';
           trHTML += '<td>' + element.id + '</td>';
@@ -12,7 +12,8 @@ const loadTable = () => {
           trHTML += '<td>' + element.age + '</td>';
           trHTML += '<td>' + element.sex + '</td>';
           trHTML += '<td>' + element.email + '</td>';
-          trHTML += '<td><button type="button" class="btn btn-outline-warning" style="margin-right: 5px;" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
+          trHTML += '<td>' + element.password + '</td>';
+          trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
           trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + element.id + ')">Del</button></td>';
           trHTML += "</tr>";
         });
@@ -128,13 +129,39 @@ const showUserEditBox = async (id) => {
   });
 }
 
+const validateUser = () => {
+  const email = document.getElementById("email").value
+  let password = document.getElementById("password").value
+  password = MD5(password);
+
+  axios.post(`${ENDPOINT}/validateUser`, {
+    email: email,
+    password: password
+  }).then((response) => {
+    console.log(response);
+    if (response.status === 200) {
+      const data = response.data;
+      if (data > 0) {
+        window.open(`./html/menu.html`, '_self');
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Email or Password is incorrect',
+          preConfirm: () => { }
+        })
+      }
+    }
+  })
+}
+
 const search = (req) => {
   const input = document.getElementById('input').value;
   axios.get(`${ENDPOINT}/${req}`)
     .then((response) => {
       if (response.status === 200) {
         const data = response.data;
-        let trHTML = '';
+        var trHTML = '';
         data.forEach((dat) => {
           if (dat.name.match(input)) {
             trHTML += '<tr class="table-active">';
@@ -143,7 +170,8 @@ const search = (req) => {
             trHTML += '<td>' + dat.age + '</td>';
             trHTML += '<td>' + dat.sex + '</td>';
             trHTML += '<td>' + dat.email + '</td>';
-            trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
+            trHTML += '<td>' + dat.password + '</td>';
+            trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
             trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + dat.id + ')">Del</button></td>';
             trHTML += "</tr>";
           }

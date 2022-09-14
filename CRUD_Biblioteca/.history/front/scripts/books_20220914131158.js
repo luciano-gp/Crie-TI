@@ -48,10 +48,10 @@ const userCreate = () => {
     FormatId: Number(format)
   })
     .then((response) => {
-      Swal.fire(`Book ${response.data.title} created`);
+      Swal.fire(`State ${response.data.title} created`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to create book: ${error.response.data.error} `)
+      Swal.fire(`Error to create state: ${error.response.data.error} `)
         .then(() => {
           showUserCreateBox();
         })
@@ -102,10 +102,14 @@ const userDelete = async (id) => {
       Swal.fire(`Book ${data.title} deleted`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to delete book: ${error.response.data.error} `);
+      Swal.fire(`Error to delete city: ${error.response.data.error} `);
       loadTable();
     });
 };
+
+const attCities = async () => {
+
+}
 
 const showUserCreateBox = () => {
   axios.get(`${ENDPOINT}/formats`)
@@ -133,7 +137,7 @@ const showUserCreateBox = () => {
         data.forEach((element) => {
           trHTML += '<tr>';
           trHTML += `<option value="${element.id}">${element.name}</option>`;
-          trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
+          trHTML += '<td><button type="button" class="btn btn-outline-secondary" onclick="showUserEditBox(' + element.id + ')">Edit</button>';
           trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + element.id + ')">Del</button></td>';
           trHTML += "</tr>";
         });
@@ -266,11 +270,13 @@ const search = (req) => {
               trHTML += '<td>' + dat.author + '</td>';
               trHTML += '<td>' + dat.pages + '</td>';
               trHTML += '<td>$ ' + dat.value + '</td>';
-              trHTML += '<td>' + dat.Publisher.name + '</td>';
               trHTML += '<td>' + dat.publication_year + '</td>';
+              trHTML += '<td>' + dat.Publisher.name + '</td>';
               trHTML += '<td>' + dat.Categorie.description + '</td>';
               trHTML += '<td>' + dat.Format.description + '</td>';
-              trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
+              trHTML += '<td>' + dat.Publisher.City.name + '</td>';
+              trHTML += '<td>' + dat.Publisher.City.State.name + '</td>';
+              trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
               trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + dat.id + ')">Del</button></td>';
               trHTML += "</tr>";
             }
@@ -284,11 +290,13 @@ const search = (req) => {
               trHTML += '<td>' + dat.author + '</td>';
               trHTML += '<td>' + dat.pages + '</td>';
               trHTML += '<td>$ ' + dat.value + '</td>';
-              trHTML += '<td>' + dat.Publisher.name + '</td>';
               trHTML += '<td>' + dat.publication_year + '</td>';
+              trHTML += '<td>' + dat.Publisher.name + '</td>';
               trHTML += '<td>' + dat.Categorie.description + '</td>';
               trHTML += '<td>' + dat.Format.description + '</td>';
-              trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
+              trHTML += '<td>' + dat.Publisher.City.name + '</td>';
+              trHTML += '<td>' + dat.Publisher.City.State.name + '</td>';
+              trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
               trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + dat.id + ')">Del</button></td>';
               trHTML += "</tr>";
             }

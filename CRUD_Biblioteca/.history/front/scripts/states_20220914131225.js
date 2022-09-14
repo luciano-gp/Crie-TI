@@ -56,7 +56,7 @@ const userEdit = () => {
       Swal.fire(`State ${response.data.name} updated`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to update state: ${error.response.data.error} `)
+      Swal.fire(`Error to update user: ${error.response.data.error} `)
         .then(() => {
           showUserEditBox(id);
         })

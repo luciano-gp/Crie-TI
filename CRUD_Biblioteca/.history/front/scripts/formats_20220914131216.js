@@ -1,6 +1,6 @@
 const ENDPOINT = returnEndpoint();
 const loadTable = () => {
-  axios.get(`${ENDPOINT}/categories`)
+  axios.get(`${ENDPOINT}/formats`)
     .then((response) => {
       if (response.status === 200) {
         const data = response.data;
@@ -23,14 +23,14 @@ loadTable();
 const userCreate = () => {
   const description = document.getElementById("description").value;
   console.log(description);
-  axios.post(`${ENDPOINT}/categories`, {
+  axios.post(`${ENDPOINT}/formats`, {
     description: description
   })
     .then((response) => {
-      Swal.fire(`Categorie ${response.data.description} created`);
+      Swal.fire(`Format ${response.data.description} created`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to create categorie: ${error.response.data.error} `)
+      Swal.fire(`Error to create format: ${error.response.data.error} `)
         .then(() => {
           showUserCreateBox();
         })
@@ -38,21 +38,21 @@ const userCreate = () => {
 }
 
 const getUser = (id) => {
-  return axios.get(`${ENDPOINT}/categories/` + id);
+  return axios.get(`${ENDPOINT}/formats/` + id);
 }
 
 const userEdit = () => {
   const id = document.getElementById("id").value;
   const description = document.getElementById("description").value;
 
-  axios.put(`${ENDPOINT}/categories/` + id, {
+  axios.put(`${ENDPOINT}/formats/` + id, {
     description: description,
   })
     .then((response) => {
-      Swal.fire(`Category ${response.data.description} updated`);
+      Swal.fire(`User ${response.data.description} updated`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to update category: ${error.response.data.error} `)
+      Swal.fire(`Error to update user: ${error.response.data.error} `)
         .then(() => {
           showUserEditBox(id);
         })
@@ -62,19 +62,19 @@ const userEdit = () => {
 const userDelete = async (id) => {
   const user = await getUser(id);
   const data = user.data;
-  axios.delete(`${ENDPOINT}/categories/` + id)
+  axios.delete(`${ENDPOINT}/formats/` + id)
     .then((response) => {
-      Swal.fire(`Category ${data.description} deleted`);
+      Swal.fire(`Format ${data.description} deleted`);
       loadTable();
     }, (error) => {
-      Swal.fire(`Error to delete category: ${error.response.data.error} `);
+      Swal.fire(`Error to delete format: ${error.response.data.error} `);
       loadTable();
     });
 };
 
 const showUserCreateBox = () => {
   Swal.fire({
-    title: 'Create category',
+    title: 'Create format',
     html:
       '<input id="id" type="hidden">' +
       '<input id="description" class="swal2-input" placeholder="Description">',
@@ -90,7 +90,7 @@ const showUserEditBox = async (id) => {
   const user = await getUser(id);
   const data = user.data;
   Swal.fire({
-    title: 'Edit Category',
+    title: 'Edit Format',
     html:
       '<input id="id" type="hidden" value=' + data.id + '>' +
       '<input id="description" class="swal2-input" placeholder="Description" value="' + data.description + '">',
@@ -114,7 +114,7 @@ const search = (req) => {
             trHTML += '<tr class="table-active">';
             trHTML += '<td>' + dat.id + '</td>';
             trHTML += '<td>' + dat.description + '</td>';
-            trHTML += '<td><button type="button" class="btn btn-outline-warning" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
+            trHTML += '<td><button type="button" class="btn btn-outline-light" onclick="showUserEditBox(' + dat.id + ')">Edit</button>';
             trHTML += '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' + dat.id + ')">Del</button></td>';
             trHTML += "</tr>";
           }
