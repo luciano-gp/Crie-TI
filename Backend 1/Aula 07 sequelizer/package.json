@@ -1,0 +1,17 @@
+{
+  "name": "aula-07-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.19",
+    "pg": "^8.7.3",
+    "sequelizer": "^1.1.4"
+  }
+}

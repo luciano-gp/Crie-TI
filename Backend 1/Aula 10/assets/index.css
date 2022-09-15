@@ -1,0 +1,23 @@
+body {
+    padding-top: 50px;
+    background-color: bisque;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+img {
+    margin: 20px 30% 0 30%;
+    width: 40%;
+    opacity: 0.1;
+}
+
+img:hover {
+    opacity: 0.8;
+}

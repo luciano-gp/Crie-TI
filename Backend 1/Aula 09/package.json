@@ -1,0 +1,17 @@
+{
+  "name": "aula-09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "query.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon query.js -e *.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.19",
+    "pg": "^8.8.0",
+    "sequelize": "^6.21.4"
+  }
+}

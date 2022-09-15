@@ -1,0 +1,52 @@
+[
+    {
+        "firstName": "Yuri",
+        "lastName": "Kerber",
+        "birthDate": "1999-10-09"
+    },
+    {
+        "firstName": "Bruno",
+        "lastName": "Dutra",
+        "birthDate": "1980-10-09"
+    },
+    {
+        "firstName": "Bruno",
+        "lastName": "Faller",
+        "birthDate": "1983-10-09"
+    },
+    {
+        "firstName": "Mariana",
+        "lastName": "Rocha",
+        "birthDate": "1994-10-09"
+    },
+    {
+        "firstName": "Rafaela",
+        "lastName": "Rocha",
+        "birthDate": "1994-10-09"
+    },
+    {
+        "firstName": "Matheus",
+        "lastName": "Roveda",
+        "birthDate": null
+    },
+    {
+        "firstName": "Yuri",
+        "lastName": "Queixada",
+        "birthDate": "1995-10-09"
+    },
+    {
+        "firstName": "Eduardo",
+        "lastName": "Bonfa",
+        "birthDate": null
+    },
+    {
+        "firstName": "Fabrico",
+        "lastName": "Careca",
+        "birthDate": "1975-10-09"
+    },
+    {
+        "firstName": "Jads",
+        "lastName": "Aegypti",
+        "birthDate": "1989-10-09"
+    }
+]

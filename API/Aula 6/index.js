@@ -58,6 +58,10 @@ const openServer = (data) => {
                 data = await saveUsers(payload);
             }
 
+            if (method === 'DELETE' && segments[0] === 'users' && segments.length === 2) {
+                data = await deleteUsers(parseInt(segments[1]));
+            }
+
             if (method === 'PUT' && segments[0] === 'users' && segments.length === 2) {
                 data = await readUsers();
                 const id = parseInt(segments[1]);
