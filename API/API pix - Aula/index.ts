@@ -1,4 +1,4 @@
-import express, { Express, Request, Response, NextFunction, response } from 'express';
+import express, { Express, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import axios from 'axios';
 axios.defaults.baseURL = 'http://177.44.248.30/v1/';
