@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@types/nodemailer": "^6.4.6",
+    "nodemailer": "^6.7.8"
+  },
+  "name": "aula-03-email",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
