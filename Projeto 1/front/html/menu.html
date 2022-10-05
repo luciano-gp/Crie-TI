@@ -65,6 +65,8 @@
                     </a>
                 </li>
             </ul>
+            <span style="font-size: 12px; position: absolute; bottom: 20px; cursor: pointer;"
+                class="nav-link text-white" onclick="return out()">Logout</span>
         </div>
     </main>
     <img style="position: fixed; top: 0; left: 280px; width: 100%; height: 100%;" src="../assets/images/background.png">
@@ -72,6 +74,12 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/endpoint.js"></script>
     <script src="../scripts/cities.js"></script>
+    <script>
+        const out = () => {
+            localStorage.removeItem('logged');
+            window.open(`/Projeto 1/front/index.html`, '_self');
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
