@@ -1,0 +1,53 @@
+.sidebar {
+    width: 100%;
+    background: var(--white);
+    border: 1px solid var(--green-100);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cover {
+    width: 100%;
+    height: 11.125rem;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-end;
+    margin: -3rem 0 1.25rem 3rem;
+}
+
+.avatar {
+    padding: 11px;
+    background-color: var(--gray-800);
+    border-radius: 8px;
+    outline: 2px solid var(--green-100);
+    width: 10.25rem;
+    height: 10.25rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.avatar img {
+    box-sizing: initial;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.description strong {
+    font-size: 1.5rem;
+    /* line-height: 1.6; */
+}
+
+.description span {
+    color: var(--gray-500);
+    /* line-height: 1.6; */
+}

@@ -1,0 +1,22 @@
+.avatar {
+    padding: 2px;
+    background-color: var(--gray-800);
+    border-radius: 8px;
+    outline: 2px solid var(--green-100);
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.avatar img {
+    box-sizing: initial;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.avatarWithoutBorder {
+    width: 4.5rem;
+    height: 3.8rem;
+    box-sizing: initial;
+    border-radius: 5px;
+    object-fit: cover;
+}

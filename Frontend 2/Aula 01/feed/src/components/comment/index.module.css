@@ -1,0 +1,49 @@
+.comment {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.content {
+    width: 100%;
+}
+
+.infos {
+    padding: 1rem;
+    background-color: var(--gray-100);
+    border-radius: 9px;
+    min-height: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infos i {
+    display: none;
+    cursor: pointer;
+}
+
+.infos:hover i {
+    display: block;
+}
+
+.time {
+    font-size: 0.75rem;
+    padding: 0.4rem 0 0.8rem 0;
+}
+
+.msg {
+    font-size: 0.875rem;
+}
+
+.like {
+    margin-top: 1rem;
+    color: var(--green-100);
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    align-items: center;
+}
+
+.like i {
+    font-size: 1.5rem;
+}

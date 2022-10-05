@@ -1,0 +1,81 @@
+<!doctype html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <main style="position: fixed; top: 0; left: 0; bottom: 0; width:280px;" class="bg-dark">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="fs-4">SystemTeca</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="./menu.html" class="nav-link text-white active">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./books.html" class="nav-link text-white">
+                        Books
+                    </a>
+                </li>
+                <li>
+                    <a href="./categories.html" class="nav-link text-white">
+                        Categories
+                    </a>
+                </li>
+                <li>
+                    <a href="./cities.html" class="nav-link text-white">
+                        Cities
+                    </a>
+                </li>
+                <li>
+                    <a href="./formats.html" class="nav-link text-white">
+                        Formats
+                    </a>
+                </li>
+                <li>
+                    <a href="./publishers.html" class="nav-link text-white">
+                        Publishers
+                    </a>
+                </li>
+                <li>
+                    <a href="./states.html" class="nav-link text-white">
+                        States
+                    </a>
+                </li>
+                <li>
+                    <a href="./users.html" class="nav-link text-white">
+                        Users
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <img style="position: fixed; top: 0; left: 280px; width: 100%; height: 100%;" src="../assets/images/background.png">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/endpoint.js"></script>
+    <script src="../scripts/cities.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
