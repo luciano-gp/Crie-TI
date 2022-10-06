@@ -13,7 +13,7 @@ export function Post(props) {
                         <span>Developer Junior | Clínica Experts</span>
                     </div>
                 </div>
-                <p>Publicado há 1h</p>
+                <p className={styles.time}>Publicado há 1h</p>
             </div>
             <div className={styles.content}>
                 <p>{props.hello}</p><br />

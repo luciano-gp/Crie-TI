@@ -79,3 +79,19 @@ button {
     padding: 1rem 1.5rem;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px){
+    .post {
+        padding: 1.5rem;
+    }
+    .time {
+        font-size: .75rem;
+    }
+    .time {
+        display: none;
+    }
+    .newComment form {
+        display: flex;
+        flex-direction: column;
+    }
+}

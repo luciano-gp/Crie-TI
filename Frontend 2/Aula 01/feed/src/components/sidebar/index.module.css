@@ -20,6 +20,15 @@
     margin: -3rem 0 1.25rem 3rem;
 }
 
+@media only screen and (max-width: 500px){
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        margin: -5rem 0 2rem 0;       
+        text-align: center;
+    }
+}
+
 .avatar {
     padding: 11px;
     background-color: var(--gray-800);

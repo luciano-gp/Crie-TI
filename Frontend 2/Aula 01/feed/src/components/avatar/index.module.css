@@ -20,3 +20,10 @@
     border-radius: 5px;
     object-fit: cover;
 }
+
+@media screen and (max-width: 600px){
+    .avatarWithoutBorder {
+        width: 3.5rem;
+        height: 2.8rem;
+    }
+}

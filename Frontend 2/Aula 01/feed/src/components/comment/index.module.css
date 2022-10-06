@@ -47,3 +47,14 @@
 .like i {
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 600px){
+    .like {
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+    }
+
+    .infos i {
+        display: block;
+    }
+}
