@@ -3,7 +3,6 @@ import styles from './App.module.css';
 import { Header } from './components/header';
 import { Sidebar } from './components/sidebar';
 import { Post } from './components/post';
-import { Comment } from './components/comment';
 
 function App() {
   return (

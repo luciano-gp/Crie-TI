@@ -1,0 +1,30 @@
+:root {
+    --white: #fff;
+    --dark: #141419;
+    --grey: #cecece
+    
+    --primary: #2FEB00;
+    --secondary: #2F6B20;
+    --third: #69EE47;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--white);
+    color: var(--dark);
+    -webkit-font-smothing: antialiased;
+}
+   
+body,
+input,
+textarea,
+button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
