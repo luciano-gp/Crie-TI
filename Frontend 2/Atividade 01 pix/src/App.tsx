@@ -1,10 +1,17 @@
-import './global.css';
-import { Select } from './components/Select';
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Router";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export function App() {
-    return (
-        <section>
-            <Select />
-        </section>
-    )
+import "./global.css";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <ToastContainer />
+      <Router />
+    </BrowserRouter>
+  );
 }
+
+export default App;

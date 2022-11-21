@@ -1,0 +1,49 @@
+.header {
+  background: var(--green-800);
+  position: fixed;
+  float: right;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem 0;
+}
+
+.content {
+  width: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  width: 4.3rem;
+  height: 4.3rem;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navlink a {
+  color: var(--white);
+}
+
+.navlink .active {
+  color: var(--green-100);
+}
+
+.header button {
+  width: 3rem;
+  height: 3rem;
+  background: var(--green-100);
+  color: var(--white);
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

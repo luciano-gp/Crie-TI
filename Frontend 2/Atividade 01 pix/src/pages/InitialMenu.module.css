@@ -1,0 +1,23 @@
+.initialMenu {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10.75rem;
+}
+
+.initialMenu a {
+  width: 17rem;
+  height: 5rem;
+  background: var(--green-100);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

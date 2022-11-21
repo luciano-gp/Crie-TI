@@ -1,7 +1,14 @@
 import { DataTypes, Model } from 'sequelize';
 import db from '../db';
 
-export class User extends Model { 
+export class User extends Model {
+  declare id: number;
+  declare name: string;
+  declare age: number;
+  declare sex: string;
+  declare email: string;
+  declare password: string;
+
   static async locateUser(email: string, password:string) {
     return await User.findOne({
       where: {

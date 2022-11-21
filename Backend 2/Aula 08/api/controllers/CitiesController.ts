@@ -35,7 +35,7 @@ class CitiesController {
 
   update = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const id = req.params.cityId;
+      const id = parseInt(req.params.cityId);
       const data = await this._validateData(req.body);
       await City.update(data, {
         where: {
@@ -51,7 +51,7 @@ class CitiesController {
   delete = async (req: Request, res: Response, next: NextFunction) => {
     await City.destroy({
       where: {
-        id: req.params.cityId
+        id: parseInt(req.params.cityId)
       }
     });
     res.json({});
@@ -59,7 +59,7 @@ class CitiesController {
 
   _validateData = async (data: any) => {
     const attributes = ['name', 'StateId'];
-    const city: any = { };
+    const city: any = {};
     for (const attribute of attributes) {
       if (!data[attribute]) {
         throw new Error(`The attribute "${attribute}" is required.`);

@@ -2,7 +2,10 @@ import { DataTypes, Model } from 'sequelize';
 import { State } from './State';
 import db from '../db';
 
-export class City extends Model { };
+export class City extends Model {
+  declare id: number;
+  declare name: string;
+};
 
 City.init({
   id: {

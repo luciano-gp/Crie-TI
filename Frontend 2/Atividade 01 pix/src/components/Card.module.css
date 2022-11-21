@@ -1,0 +1,53 @@
+.card {
+  width: 100%;
+  height: 5.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+}
+
+.new {
+  background: linear-gradient(90deg, var(--grenn-50) 0%, var(--white) 100%);
+}
+
+.newPix {
+  width: 3.5rem;
+  height: 1.6875rem;
+  background: var(--green-100);
+  border-radius: 8px;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -3rem;
+  margin-top: 2rem;
+}
+
+.newPix span {
+  color: var(--white);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 0 3.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card strong {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-left: 3rem;
+}
+
+.send {
+  color: var(--green-200);
+}
+
+.received {
+  color: var(--red-500);
+}
